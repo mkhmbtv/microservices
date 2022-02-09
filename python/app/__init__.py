@@ -11,10 +11,10 @@ db.init_app(app)
 Migrate(app, db)
 
 
-@app.before_request
-def before_request():
-    if request.remote_addr != "127.0.0.1":
-        return abort(403)
+# @app.before_request
+# def before_request():
+#     if request.remote_addr != "127.0.0.1":
+#         return abort(403)
 
 
 @app.route('/')
